@@ -127,8 +127,8 @@ def main(sc1, sc2):
     
 if __name__ == '__main__':
     sc = SparkContext()
-    vfiles=sc.textFile("/data/share/bdm/nyc_parking_violations/*.csv", use_unicode=True)
-    cent = sc.textFile("/data/share/bdm/nyc_cscl.csv", use_unicode=True)    
+    vfiles=sc.textFile("hdfs:///data/share/bdm/nyc_parking_violations/*.csv", use_unicode=True)
+    cent = sc.textFile("hdfs:///data/share/bdm/nyc_cscl.csv", use_unicode=True)    
     main(vfiles, cent)
     
 
